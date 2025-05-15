@@ -7,7 +7,7 @@ const URL = require('./models/url');
 const urlRoute = require('./routes/url');
 const staticRoute = require('./routes/staticRouter');
 const app = express();
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8080;
 
 connectToMongoDB(process.env.MONGO_URL).then(() =>
     console.log('MongoDB started')
