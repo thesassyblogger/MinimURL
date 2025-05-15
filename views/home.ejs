@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MinimURL - Cherry Blossom</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="blossom-container"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="https://thesassyblogger.github.io/TheSassyBlogger.com/about.html" target="_blank">About</a>
+            </li>
+            <li><a href="https://github.com/thesassyblogger" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/mansi-patel-695080219/" target="_blank">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <div class="title-scroll">
+        <span>🌸MinimURL - Shorten your links with elegance & charm🌸</span>
+    </div>
+
+    <section class="form-section">
+        <h1>Shorten Your URL</h1>
+
+        <% if (locals.id) { %>
+            <p>URL Generated: <br> http://localhost:8001/url/<%= id %>
+            </p>
+            <% } %>
+
+                <form action="/url" method="POST">
+                    <input type="url" name="url" placeholder="Paste your long URL here..." required>
+                    <button type="submit">Generate</button>
+                </form>
+
+    </section>
+    <div id="table">
+        <% if (urls && urls.length> 0) { %>
+            <table>
+                <thead>
+                    <th>S. no</th>
+                    <th>ShortID</th>
+                    <th>Redirect</th>
+                    <th>clicks</th>
+                </thead>
+                <tbody>
+                    <% urls.forEach((url, index)=> { %>
+                        <tr>
+                            <td>
+                                <%= index + 1 %>
+                            </td>
+                            <td>
+                                <%= url.shortId %>
+                            </td>
+                            <td><a href="<%= url.redirectURL %>" target="_blank">
+                                    <%= url.redirectURL %>
+                                </a></td>
+                            <td>
+                                <%= url.visitHistory.length %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+            <% } else { %>
+                <p>No shortened URLs found.</p>
+                <% } %>
+
+                   
+
+
+    <script src="/app.js"></script>
+</body>
+
+</html>
