@@ -13,42 +13,23 @@ Controller: Handles business logic for creating short URLs & rendering views (co
 Routes: Organized routes for API & static rendering (routes/url.js, routes/staticRouter.js).
 
 🛠️ Tech Stack
-Technology	Purpose
-Node.js	Backend runtime
-Express.js	Web framework
-MongoDB Atlas	Cloud database
-EJS	Templating engine for dynamic HTML
-HTML & CSS	Frontend structure & styling
+-Technology	Purpose
+-Node.js	Backend runtime
+-Express.js	Web framework
+-MongoDB Atlas	Cloud database
+-EJS	Templating engine for dynamic HTML
+-HTML & CSS	Frontend structure & styling
 Render.com	Deployment platform
 
 🚀 Features
-Shorten long URLs with unique short IDs.
+-Shorten long URLs with unique short IDs.
 
-Tracks visit history (click count).
+-Tracks visit history (click count).
 
-Displays all URLs in a styled table.
+-Displays all URLs in a styled table.
 
-Cherry Blossom background animation.
+-Cherry Blossom background animation.
 
-Clean & elegant EJS-based frontend.
+-Clean & elegant EJS-based frontend.
 
-MVC-based folder structure for scalability.
-
-📂 Folder Structure
-p
-MinimURL/
- ├── controllers/
- │   └── url.js
- ├── models/
- │   └── url.js
- ├── routes/
- │   ├── url.js
- │   └── staticRouter.js
- ├── views/
- │   └── home.ejs
- ├── public/
- │   ├── style.css
- │   └── app.js
- ├── connect.js
- ├── index.js
- └── package.json
+-MVC-based folder structure for scalability.
