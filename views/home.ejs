@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MinimURL - Cherry Blossom</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 
 <body>
@@ -31,7 +33,7 @@
         <h1>Shorten Your URL</h1>
 
         <% if (locals.id) { %>
-            <p>URL Generated: <br> http://localhost:8001/url/<%= id %>
+            <p>URL Generated: <br> http://minimurl-env.eba-d2pggyzm.ca-central-1.elasticbeanstalk.com/url/<%= id %>
             </p>
             <% } %>
 
@@ -73,10 +75,10 @@
                 <p>No shortened URLs found.</p>
                 <% } %>
 
-                   
 
 
-    <script src="/app.js"></script>
+
+                    <script src="/app.js"></script>
 </body>
 
 </html>
