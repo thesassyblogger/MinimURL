@@ -16,6 +16,7 @@ body {
   pointer-events: none;
   z-index: -1;
 }
+
 nav {
   margin-left: 65vw;
   display: flex;
@@ -39,7 +40,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color:#84324e ;
+  color: #84324e;
 }
 
 .title-scroll {
@@ -116,6 +117,15 @@ form button:hover {
   font-size: 1.2rem;
 }
 
+nav {
+  margin-left: 65vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
 .result a {
   color: #d25f86;
   font-weight: bold;
@@ -140,23 +150,106 @@ form button:hover {
   }
 }
 
-#table, thead, tbody, tr, th {
+#table,
+thead,
+tbody,
+tr,
+th {
   border: 0.1rem solid black;
 }
 
-#table{
+#table {
   margin-top: 2vw;
-  margin-right: 10vw;
-  margin-left: 10vw;
+  margin-right: 5vw;
+  margin-left: 5vw;
   justify-content: center;
   color: #84324e;
   border-radius: 1rem;
+  overflow-x: auto;
+  width: 90%;
 }
 
-a{
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+
+
+}
+
+
+th,
+td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 10%;
+  /* S. No */
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 20%;
+  /* Short ID */
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 40%;
+  /* Redirect URL */
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 30%;
+  /* Clicks */
+}
+
+a {
   text-decoration: none;
   color: #84324e;
 }
-a:hover{
+
+a:hover {
   color: #000000;
+}
+
+@media screen and (min-width: 180px) and (max-width: 650px) {
+  nav {
+    margin-left: -12vw;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+
+  }
+
+  body {
+    width: 100%;
+  }
+
+  .form-section h1 {
+    font-size: 2rem;
+    color: #a65b76;
+  }
+
+  form {
+    font-size: 3rem;
+  }
+
+  table,
+  thead {
+    width: 100vw;
+  }
+
+  th,
+  td {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 }
