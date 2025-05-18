@@ -2,6 +2,8 @@
 MinimURL is a full-stack URL shortener web application built with Node.js, Express.js, MongoDB, and EJS, following the MVC (Model-View-Controller) architecture.
 It allows users to shorten long URLs, track click counts, and view a beautiful interface with cherry blossom animations for an elegant user experience.
 
+Project URL - http://minimurl-env.eba-d2pggyzm.ca-central-1.elasticbeanstalk.com/
+
 🏗️ Project Architecture
 🔶 MVC Pattern
 Model: Defines MongoDB schema for URL mappings (models/url.js).
