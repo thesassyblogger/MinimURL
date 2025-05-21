@@ -1,37 +1,49 @@
-🌸 MinimURL - Elegant URL Shortener
-MinimURL is a full-stack URL shortener web application built with Node.js, Express.js, MongoDB, and EJS, following the MVC (Model-View-Controller) architecture.
-It allows users to shorten long URLs, track click counts, and view a beautiful interface with cherry blossom animations for an elegant user experience.
+# 🌸 MinimURL – Elegant URL Shortener
 
-Project URL - http://minimurl-env.eba-d2pggyzm.ca-central-1.elasticbeanstalk.com/
+**MinimURL** is a modern, full-stack URL shortener built using **Node.js**, **Express**, **MongoDB**, and **EJS** with a clean **MVC architecture**. It features a responsive UI with animated cherry blossom effects for a refined user experience.
 
-🏗️ Project Architecture
-🔶 MVC Pattern
-Model: Defines MongoDB schema for URL mappings (models/url.js).
+### 🔗 Live Project:
+▶ [http://minimurl-env.eba-d2pggyzm.ca-central-1.elasticbeanstalk.com/](http://minimurl-env.eba-d2pggyzm.ca-central-1.elasticbeanstalk.com/)
 
-View: EJS templates render dynamic pages with responsive design (views/home.ejs).
+---
 
-Controller: Handles business logic for creating short URLs & rendering views (controllers/url.js).
+## 🚀 Key Features
 
-Routes: Organized routes for API & static rendering (routes/url.js, routes/staticRouter.js).
+- 🔗 Shorten long URLs to compact, shareable links.
+- 📊 Track click counts and visit history per URL.
+- 🌸 Clean, animated frontend with cherry blossom effects.
+- 📁 Structured using MVC architecture for maintainability.
+- 🐳 Dockerized and production-ready.
+- 🌐 Deployed via AWS Elastic Beanstalk and MongoDB Atlas.
 
-🛠️ Tech Stack
--Technology	Purpose
--Node.js	Backend runtime
--Express.js	Web framework
--MongoDB Atlas	Cloud database
--EJS	Templating engine for dynamic HTML
--HTML & CSS	Frontend structure & styling
-Render.com	Deployment platform
+---
 
-🚀 Features
--Shorten long URLs with unique short IDs.
+## 🛠️ Tech Stack
 
--Tracks visit history (click count).
+| Technology        | Description                          |
+|------------------|--------------------------------------|
+| **Node.js**       | Backend runtime                      |
+| **Express.js**    | Web server framework                 |
+| **MongoDB Atlas** | Cloud database (NoSQL)               |
+| **Mongoose**      | MongoDB ORM                          |
+| **EJS**           | Templating engine for dynamic HTML   |
+| **HTML/CSS**      | Frontend structure and styling       |
+| **Docker**        | Containerization                     |
+| **AWS EB**        | Hosting platform for deployment      |
 
--Displays all URLs in a styled table.
+---
 
--Cherry Blossom background animation.
+## 🏗️ Project Structure (MVC)
+MinimURL/
+├── controllers/ # Business logic
+├── models/ # Mongoose schemas
+├── routes/ # Application routes
+├── views/ # EJS frontend templates
+├── public/ # Static assets (CSS, images)
+├── app.js # Main server file
+└── .env # Environment variables
 
--Clean & elegant EJS-based frontend.
-
--MVC-based folder structure for scalability.
+🌐 Deployment
+Backend: AWS Elastic Beanstalk
+Database: MongoDB Atlas (Cluster-hosted)
+Container Registry: Docker Hub – mansip1409/minimurl
